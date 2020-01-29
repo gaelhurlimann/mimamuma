@@ -10,10 +10,12 @@ from flask import request
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 
 app = Flask(__name__)
-@app.route('/')
 
+@app.route('/')
 def index(bandname="Photek"):
     return render_template('matitle.html', name=bandname)
+
+
 @app.route('/<string:bandname>', methods=['GET', 'POST'])
 def hello_world(bandname):
 	if request.method == 'POST':
