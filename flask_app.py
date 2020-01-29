@@ -27,21 +27,21 @@ def createtitle(bandname):
 	VerbesSyn = []
 
 #read groupes
-	document_path = '/mysite/dictionnaries/groupe.txt'
+	document_path = '/dictionnaries/groupe.txt'
 	with open(document_path, 'r') as f:
 		reader = csv.reader(f, delimiter='\t')
 		groupesSyn = (list(reader))[0]
 	groupe = groupesSyn[random.randint(0, len(groupesSyn)-1)]
 
 #read Verbes
-	document_path = '/mysite/dictionnaries/verbe.txt'
+	document_path = '/dictionnaries/verbe.txt'
 	with open(document_path, 'r') as f:
 		reader = csv.reader(f, delimiter='\t')
 		VerbesSyn = (list(reader))[0]
 	verbe = VerbesSyn[random.randint(0, len(VerbesSyn)-1)]
 
 #read des mots pour dire "musique"
-	document_path = '/mysite/dictionnaries/musique.txt'
+	document_path = '/dictionnaries/musique.txt'
 	with open(document_path, 'r') as f:
 		reader = csv.reader(f, delimiter='\t')
 		musiqueSyn = (list(reader))
@@ -49,7 +49,7 @@ def createtitle(bandname):
 	det = singplur_to_det(musique[1])
 
 #read des adjectifs pour qualifier la musique
-	document_path = '/mysite/dictionnaries/adj.txt'
+	document_path = '/dictionnaries/adj.txt'
 	with open(document_path, 'r') as f:
 		reader = csv.reader(f, delimiter='\t')
 		adjSyn = (list(reader))
