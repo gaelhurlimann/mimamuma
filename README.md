@@ -7,4 +7,4 @@ A very old title generator (in French)
   - random adjectives to qualify the album
 2. we randomize titles based on those lists of words 
 
-The first version was programmed in ASP
+The first version was programmed in Active Server Page (sigh)
