@@ -7,6 +7,7 @@ from flask import Flask
 from flask import render_template
 from flask import request
 
+THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 
 app = Flask(__name__)
 @app.route('/')
@@ -27,7 +28,7 @@ def createtitle(bandname):
 	VerbesSyn = []
 
 #read groupes
-	document_path = 'dictionnaries/groupe.txt'
+	document_path = my_file = os.path.join(THIS_FOLDER, 'dictionnaries/groupe.txt')
 	with open(document_path, 'r') as f:
 		reader = csv.reader(f, delimiter='\t')
 		groupesSyn = (list(reader))[0]
