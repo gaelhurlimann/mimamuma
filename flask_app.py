@@ -28,7 +28,7 @@ def createtitle(bandname):
 	VerbesSyn = []
 
 #read groupes
-	document_path = my_file = os.path.join(THIS_FOLDER, 'dictionnaries/groupe.txt')
+	document_path = os.path.join(THIS_FOLDER, 'dictionnaries/groupe.txt')
 	with open(document_path, 'r') as f:
 		reader = csv.reader(f, delimiter='\t')
 		groupesSyn = (list(reader))[0]
